@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+ENV/
+.env
+/.vscode/
+/.idea/
+dist/
+build/
+*.egg-info/
+
+# virtualenvs
+.venv/
+
+# user config and history
+.anidl/
+downloads/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# logs
+anidl.log
+
+# local test artifacts
+debug_cli_run.py
+rich_test.py
+run_parse_test.py

@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "anidl"
+version = "0.1.0"
+description = "Anime torrent downloader CLI with advanced features"
+authors = ["ctrlcat0x"]
+readme = "README.md"
+license = "MIT"  # Choose an appropriate license (e.g., MIT, GPL)
+repository = "https://github.com/ctrlcat0x/anidl"
+homepage = "https://github.com/ctrlcat0x/anidl"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.0"
+feedparser = "^6.0.0"
+requests = "^2.31.0"
+aiohttp = "^3.8.0"
+aria2p = "^0.11.3"
+rich = "^13.0.0"
+tabulate = "^0.9.0"
+toml = "^0.10.0"
+plyer = "^2.0.0"
+
+[tool.poetry.scripts]
+anidl = "anidl.cli:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
