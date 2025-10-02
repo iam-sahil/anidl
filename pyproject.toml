@@ -2,11 +2,11 @@
 name = "anidl"
 version = "0.1.0"
 description = "Anime torrent downloader CLI with advanced features"
-authors = ["ctrlcat0x"]
+authors = ["iam-sahil"]
 readme = "README.md"
 license = "MIT"  # Choose an appropriate license (e.g., MIT, GPL)
-repository = "https://github.com/ctrlcat0x/anidl"
-homepage = "https://github.com/ctrlcat0x/anidl"
+repository = "https://github.com/iam-sahil/anidl"
+homepage = "https://github.com/iam-sahil/anidl"
 
 [tool.poetry.dependencies]
 python = "^3.10"

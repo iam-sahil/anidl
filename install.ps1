@@ -3,15 +3,15 @@ Install script for Windows (PowerShell) to install the anidl package so the `ani
 
 This script attempts the following, in order:
   1. If pipx is installed, use pipx to install the package from GitHub (recommended).
-  2. Otherwise, install via `python -m pip install --user git+https://github.com/ctrlcat0x/anidl.git`.
+  2. Otherwise, install via `python -m pip install --user git+https://github.com/iam-sahil/anidl.git`.
      After a user install, the script will attempt to add the user Scripts directory to PATH using setx
      so the `anidl` console script becomes accessible in new shells.
 
 Usage (single-line install via internet):
-  irm https://raw.githubusercontent.com/ctrlcat0x/anidl/master/install.ps1 | iex
+  irm https://raw.githubusercontent.com/iam-sahil/anidl/master/install.ps1 | iex
 
 Or to use pipx explicitly (if installed locally):
-  pipx install git+https://github.com/ctrlcat0x/anidl.git
+  pipx install git+https://github.com/iam-sahil/anidl.git
 #>
 
 function Write-Info($m){ Write-Host $m -ForegroundColor Cyan }
@@ -24,7 +24,7 @@ Write-Info "anidl installer starting..."
 if (Get-Command pipx -ErrorAction SilentlyContinue) {
     Write-Info "pipx detected — installing via pipx (preferred)"
     try {
-        pipx install --force "git+https://github.com/ctrlcat0x/anidl.git"
+        pipx install --force "git+https://github.com/iam-sahil/anidl.git"
         Write-Info "Installed via pipx. You should be able to run: anidl search \"one piece\""
         exit 0
     } catch {
@@ -41,7 +41,7 @@ if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
 Write-Info "Installing via pip (user install)..."
 try {
     & python -m pip install --upgrade pip setuptools wheel
-    & python -m pip install --user --upgrade "git+https://github.com/ctrlcat0x/anidl.git"
+    & python -m pip install --user --upgrade "git+https://github.com/iam-sahil/anidl.git"
 } catch {
     Write-Err "pip install failed: $_"
     exit 1
